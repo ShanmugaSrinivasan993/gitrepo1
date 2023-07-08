@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    tools{
+        maven "mvn"
+    }
     environment{
         PATH = "/usr/share/maven/bin:$PATH"
     }
