@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools{
-        maven "mvn"
+        maven "maven3"
     }
     environment{
         PATH = "/usr/share/maven/bin:$PATH"
