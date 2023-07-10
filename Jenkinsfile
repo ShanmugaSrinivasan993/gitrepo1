@@ -20,7 +20,7 @@ pipeline{
                     sh "mvn clean package"
                     sh "mv target/*.war target/myweb.war"
                     sh "cp target/*.war ./copydir/"
-                    sh "cp ./copydir/*.war tomcat_ct:/usr/local/tomcat/webapps"
+                    // sh "cp ./copydir/*.war tomcat_ct:/usr/local/tomcat/webapps"
                 }
             }
         }
