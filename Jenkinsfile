@@ -22,15 +22,15 @@ pipeline{
                 }
             }
         }
-        stage("Deploy to Tomcat"){
-            steps{
-                script{
-                    scp target/myweb.war /usr/local/tomcat/webapps/
-                    /usr/local/tomcat/bin/shutdown.sh
-                    /usr/local/tomcat/bin/startup.sh
+        // stage("Deploy to Tomcat"){
+        //     steps{
+        //         script{
+        //             scp target/myweb.war /usr/local/tomcat/webapps/
+        //             /usr/local/tomcat/bin/shutdown.sh
+        //             /usr/local/tomcat/bin/startup.sh
                         
-                }
-            }
-        }
+        //         }
+        //     }
+        // }
     }
 }
