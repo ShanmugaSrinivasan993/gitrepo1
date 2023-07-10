@@ -19,8 +19,8 @@ pipeline{
                 script{
                     sh "mvn clean package"
                     sh "mv target/*.war target/myweb.war"
-                    sh "docker cp jenkins_ct:/var/jenkins_home/workspace/dec-pipe1/target/ ./copydir/"
-                    sh "docker cp ./copydir/ tomcat_ct:/usr/local/tomcat/webapps"
+                    sh "cp jenkins_ct:/var/jenkins_home/workspace/dec-pipe1/target/*.war ./copydir/"
+                    sh "cp ./copydir/*.war tomcat_ct:/usr/local/tomcat/webapps"
                 }
             }
         }
