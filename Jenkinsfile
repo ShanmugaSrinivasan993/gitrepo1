@@ -19,7 +19,7 @@ pipeline{
                 script{
                     sh "mvn clean package"
                     sh "mv target/*.war target/myweb.war"
-                    sh "cp jenkins_ct:/var/jenkins_home/workspace/dec-pipe1/target/*.war ./copydir/"
+                    sh "cp target/*.war ./copydir/"
                     sh "cp ./copydir/*.war tomcat_ct:/usr/local/tomcat/webapps"
                 }
             }
