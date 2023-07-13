@@ -1,4 +1,4 @@
-pipeline{
+inpipeline{
     agent any
     tools{
         maven "maven3"
@@ -19,7 +19,7 @@ pipeline{
                 script{
                     sh "mvn clean package"
                     sh "mv target/*.war target/myweb.war"
-                    sh "cp target/*.war /home/ubuntulinux/copydir/"
+                    sh "cp target/*.war /home/jenkins/copydir/"
                     // sh "cp ./copydir/*.war tomcat_ct:/usr/local/tomcat/webapps"
                 }
             }
