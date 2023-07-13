@@ -19,7 +19,7 @@ pipeline{
                 script{
                     sh "mvn clean package"
                     sh "mv target/*.war target/myweb.war"
-                    sh "cp target/*.war /"
+                    sh "sudo cp target/*.war /"
                     // sh "cp ./copydir/*.war tomcat_ct:/usr/local/tomcat/webapps"
                 }
             }
